@@ -1,0 +1,47 @@
+
+.container{
+    width:1200px;
+    margin:0px auto;
+    background-image: linear-gradient(to top,white,skyblue);
+}
+
+h2,p{
+    margin-left: 50px;
+}
+
+h1{
+    text-align: center;
+}
+.left{
+    float: left;
+    height: 280px;
+    width: 250px;
+    background-color: skyblue;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.middle{
+    float: left;
+    height: 280px;
+    width: 500px;
+    background-color:skyblue;
+    margin-left: 50px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.right{
+    float: left;
+    height: 280px;
+    width: 400px;
+    background-color: skyblue;
+    margin-left: 50px;
+    text-align: center;
+    white-space: nowrap;
+}
+
+section{
+    clear: left;
+    column-gap: 400px;
+}

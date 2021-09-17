@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-18">
+        <title>Random Celebrities</title>
+        <link rel="stylesheet" href="style.css">
+        <script type="text/javascript">
+            var names = ["M S Dhoni","Virat Kohli","Rohit Sharma","Hardik Pandya","Jasprit Bumrah","Bhuvaneshwar Kumar","Shikar Dhawan","Smriti Mandana","Mithali Raj","Harmanpreet Kaur"];
+            var img0 = "<img src='cricketers/0.png' style='height:320px;width:250px'>";
+            var img1 = "<img src='cricketers/1.png'style='height:320px;width:250px'>";
+            var img2 = "<img src='cricketers/2.png'style='height:320px;width:250px'>";
+            var img3 = "<img src='cricketers/3.png'style='height:320px;width:250px'>";
+            var img4 = "<img src='cricketers/4.png'style='height:320px;width:250px'>";
+            var img5 = "<img src='cricketers/5.png'style='height:320px;width:250px'>";
+            var img6 = "<img src='cricketers/6.png'style='height:320px;width:250px'>";
+            var img7 = "<img src='cricketers/7.png'style='height:320px;width:250px'>";
+            var img8 = "<img src='cricketers/8.png'style='height:320px;width:250px'>";
+            var img9 = "<img src='cricketers/9.png'style='height:320px;width:250px'>";
+            var images = [img0,img1,img2,img3,img4,img5,img6,img7,img8,img9];
+            var ages = [39,31,33,26,26,30,34,24,37,31]
+            var highscores = [183,183,264,83,10,53,143,135,125,171]
+
+            var ran = Math.random()*10;
+            var ran1 = Math.floor(ran);
+            function run(){
+                document.getElementById("img").innerHTML=images[ran1];
+                document.getElementById("nam").innerHTML="Name: "+names[ran1];
+                document.getElementById("age").innerHTML="Age: "+ages[ran1];
+                document.getElementById("hs").innerHTML="High Score in ODI: "+highscores[ran1];
+            }
+        </script>
+    </head>
+    <body>
+        <table>
+            <tr>
+                <td><div id="img"></div></td>
+            </tr>
+            <tr>
+                <td id="nam"></td>
+            </tr>
+            <tr>
+                <td id="age"></td>
+            </tr>
+            <tr>
+                <td id="hs"></td>
+            </tr>
+        </table>
+        <!--<div id="img" style="height: 320px; width:250px">
+            
+        </div>
+        <div id="nam">
+            
+        </div>
+        <div id="age">
+            
+        </div>
+        <div id="hs">
+            
+        </div>-->
+        <button onclick="run()">Click</button>
+    </body>
+</html>

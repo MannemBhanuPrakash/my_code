@@ -1,0 +1,231 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+<!-- jQuery and JS bundle w/ Popper.js -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+
+<script>
+
+    function validateForm() {
+        //document.getElementById("myForm").style.visibility = "hidden";
+        var name = document.getElementById("formName").value;
+        validateName(name);
+        var email = document.getElementById("formEmail").value;
+        validateEmail(email);
+        var mobile = document.getElementById("formMobileNumber").value;
+        validateNumber(mobile);
+        var dob = document.getElementById("birthday").value;
+        var degree = document.getElementById("degree").value;
+        var course = document.getElementById("courses").value;
+        var addr1 = document.getElementById("inputAddress").value;
+        var addr2 = document.getElementById("inputAddress2").value;
+        var city = document.getElementById("inputCity").value;
+        var state = document.getElementById("inputState").value;
+        var zip = document.getElementById("inputZip").value;
+        console.log(name);
+        console.log(email);
+        console.log(mobile);
+        console.log(dob);
+        console.log(degree);
+        console.log(course);
+        console.log(addr1);
+        console.log(addr2);
+        console.log(city);
+        console.log(state);
+        console.log(zip);
+        window.print();
+
+    }
+
+    validateName = (name) => {
+        if (/^[A-Za-z ]+$/.test(name))
+        {
+            return (true)
+        }
+        alert("You have entered an invalid name!")
+        return (false)
+    }
+
+    validateEmail = (email) => {
+        if (/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(email))
+        {
+            return (true)
+        }
+        alert("You have entered an invalid email address!")
+        return (false)
+    }
+
+    validateNumber = (mobile) => {
+        if (/^[0-9]+$/.test(mobile))
+        {
+            return (true)
+        }
+        alert("You have entered an invalid mobile number!")
+        return (false)
+    }
+
+    Filevalidation2 = () => {
+        var fileInput2 = document.getElementById("validatedCustomFile2");
+        var filePath2 = fileInput2.value;
+        // Allowing file type 
+        var allowedExtensions2 =  
+        /(\.doc|\.docx|\.pdf)$/i; 
+                        
+        if (!allowedExtensions2.exec(filePath2)) { 
+            alert('Invalid file type'); 
+            fileInput2.value = ''; 
+            return false; 
+        }
+        else 
+        { 
+        
+            // Image preview 
+            if (fileInput2.files && fileInput2.files[0]) { 
+                var reader2 = new FileReader(); 
+                reader2.onload = function(e) { 
+                    document.getElementById( 
+                        'imagePreview2').innerHTML =  
+                        '<img src="' + e.target.result 
+                        + '"/>';
+                    console.log(e.target.result); 
+                }; 
+                
+                
+                reader2.readAsDataURL(fileInput2.files[0]); 
+            } 
+        }
+    }
+    
+    Filevalidation1 = () => {
+        var fileInput1 = document.getElementById("validatedCustomFile1");
+        var filePath1 = fileInput1.value;
+        // Allowing file type 
+        var allowedExtensions1 =  
+        /(\.jpg|\.jpeg|\.png)$/i; 
+                        
+        if (!allowedExtensions1.exec(filePath1)) { 
+            alert('Invalid file type'); 
+            fileInput1.value = ''; 
+            return false; 
+        }
+        else 
+        { 
+        
+            // Image preview 
+            if (fileInput1.files && fileInput1.files[0]) { 
+                var reader1 = new FileReader(); 
+                reader1.onload = function(e) { 
+                    document.getElementById( 
+                        'imagePreview1').innerHTML =  
+                        '<img src="' + e.target.result 
+                        + '"/>'; 
+                    console.log(e.target.result); 
+                }; 
+                
+                reader1.readAsDataURL(fileInput1.files[0]); 
+            } 
+        }
+    }
+
+</script>
+</head>
+<body>
+    <div class="container" style="max-width: 540px;">
+        <form name="myForm" onsubmit="return validateForm()" id="myForm" method="post"> 
+            <div class="form-group">
+                <label for="name">Enter Name</label>
+                <input name="fname" type="text" class="form-control" id="formName" placeholder="Enter Name" maxlength="20" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email address</label>
+                <input name="femail" type="email" class="form-control" id="formEmail" aria-describedby="emailHelp" placeholder="Enter email" maxlength="30" required>
+                <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+            </div>
+            <div class="form-group">
+                <label for="mobile_number">Mobile Number</label>
+                <input name="fmobile" type="text" class="form-control" id="formMobileNumber" placeholder="Mobile Number" maxlength="10" required>
+            </div>
+            <div class="form-group">
+                <label for="birthday">Date of Birth:</label>
+                <input name="fdob" type="date" id="birthday" name="birthday">
+            </div>
+            <div class="form-group">
+                <label for="degree">Select Degree</label>
+                <select name="fdegree" class="form-control" id="degree" required>
+                    <option>UG</option>
+                    <option>PG</option>
+                </select>
+              </div>
+            <div class="form-group">
+                <label for="courses">Select Course</label>
+                <select name="fcourse" class="form-control" id="courses" required>
+                    <option>B.Tech</option>
+                    <option>B.Com</option>
+                    <option>B.Sc</option>
+                    <option>B.A</option>
+                    <option>B.B.A</option>
+                    <option>M.Tech</option>
+                    <option>M.Com</option>
+                    <option>M.Sc</option>
+                    <option>M.A</option>
+                    <option>M.B.A</option>
+                
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="inputAddress">Address 1</label>
+                <input name="fadd1" type="text" class="form-control" id="inputAddress" placeholder="1234 Main St" required>
+            </div>
+            <div class="form-group">
+                <label for="inputAddress2">Address 2</label>
+                <input name="fadd2" type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor" required>
+            </div>
+            <div class="form-group">
+                <label for="inputCity">City</label>
+                <input name="fcity" type="text" class="form-control" id="inputCity" required>
+            </div>
+            <div class="form-group">
+                <label for="inputState">State</label>
+                <input name="fstate" type="text" class="form-control" id="inputState" required>
+            </div>
+            <div class="form-group">
+                <label for="inputZip">Zip</label>
+                <input name="fzip" type="text" class="form-control" id="inputZip" maxlength="6" required>
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="formPhoto">Upload Photo</label>
+                <input type="file" class="form-control-file" id="validatedCustomFile1" onchange="Filevalidation1()" required>
+            </div>
+            <div id="imagePreview1"></div>
+            <br><br>
+            <div class="form-group">
+                <label for="formCert">Upload File</label>
+                <input type="file" class="form-control-file" id="validatedCustomFile2" onchange="Filevalidation2()" required>
+            </div>
+            <div id="imagePreview2"></div>
+            
+            <!-- <div class="form-group">
+                <label for="exampleInputPassword1">Password</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+            </div> -->
+            <br><br>
+            
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+
+        <span id="spanResult">
+
+        </span>
+    </div>
+
+</body>
+</html>

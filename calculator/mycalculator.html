@@ -1,0 +1,51 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <!-- <script src="calsio.js"></script> -->
+    <title>Calculator</title>
+</head>
+<body style="background-image: url(https://images.pexels.com/photos/255379/pexels-photo-255379.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500);
+                background-size: cover;">
+    
+    <div class="container">
+    <table style="border: 10px;">
+        <tr>
+            <h1 style="text-align:center;">
+                Calculator</h1></tr>
+        <tr>
+            <input style="height:50px; width:420px; border-radius:20px;" id="action"></input>
+        </tr>
+        <tr>
+            <td><input type="button" value="9" id="n9" onclick="num9()"></input></td>
+            <td><input type="button" value="8" id="n8" onclick="num8()"></input></td>
+            <td><input type="button" value="7" id="n7" onclick="num7()"></input></td>
+            <td><input type="button" value="+" id="na" onclick="add()"></input></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="6" id="n6" onclick="num6()"></input></td>
+            <td><input type="button" value="5" id="n5" onclick="num5()"></input></td>
+            <td><input type="button" value="4" id="n4" onclick="num4()"></input></td>
+            <td><input type="button" value="-" id="ns" onclick="sub()"></input></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="3" id="n3" onclick="num3()"></input></td>
+            <td><input type="button" value="2" id="n2" onclick="num2()"></input></td>
+            <td><input type="button" value="1" id="n1" onclick="num1()"></input></td>
+            <td><input type="button" value="*" id="nm" onclick="mul()"></input></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="clear" id="del" style="background-color:red;" onclick="erase()"></input></td>
+            <td><input type="button" value="0" id="n0" onclick="num0()"></input></td>
+            <td><input type="button" value="/" id="nd" onclick="div()"></input></td>
+            <td><input type="button" value="=" id="ne" style="background-color:rgb(94, 214, 83)"onclick="equal()"></input></td>
+        </tr>
+    </table>
+    </div>
+
+  <script src="calsio.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,36 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>emailValidator</title>
+        <script type="text/javascript">
+        function enter(){
+            var number = document.getElementById("text1").value;
+            var regx = /^([a-z 0-9\.]+)@([a-z0-9]+).([a-z]{2,8})?$ /;
+            if(regx.test(number))
+            {
+                document.getElementById("lbuser").innerHTML="valid";
+                document.getElementById("lbuser").style.visibility="visible";
+                document.getElementById("lbuser").style.color="green";
+            }
+            else{
+                document.getElementById("lbuser").innerHTML="Invalid";
+                document.getElementById("lbuser").style.visibility="visible";
+                document.getElementById("lbuser").style.color="red";
+    
+            }
+            
+        }
+        </script>
+    </head>
+    <body style="text-align:center;padding-top: 30;">
+        <form >
+            <h2>Enter Your E-Mail</h2>
+            <input id="text1" placeholder="email" type="email" required/>
+            <button onclick="enter()"type="button">Submit</button>
+            <label id="lbuser" style="color: red;visibility: hidden;" ></label>
+        </form>
+        
+    </body>
+    </html>

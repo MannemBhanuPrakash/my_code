@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-18">
+        <title>Random Actress</title>
+        <link rel="stylesheet" href="style.css">
+        <script type="text/javascript">
+            var names = ["Anushka","Kajal","Samantha","Tamanna","Keerthy","Anupama","Nivetha","Rakul","Pallavi","Aditi"];
+            var img0 = "<img src='actress/0.jpg' style='height:320px;width:250px'>";
+            var img1 = "<img src='actress/1.jpg'style='height:320px;width:250px'>";
+            var img2 = "<img src='actress/2.png'style='height:320px;width:250px'>";
+            var img3 = "<img src='actress/3.png'style='height:320px;width:250px'>";
+            var img4 = "<img src='actress/4.jpg'style='height:320px;width:250px'>";
+            var img5 = "<img src='actress/5.jpg'style='height:320px;width:250px'>";
+            var img6 = "<img src='actress/6.png'style='height:320px;width:250px'>";
+            var img7 = "<img src='actress/7.jpg'style='height:320px;width:250px'>";
+            var img8 = "<img src='actress/8.png'style='height:320px;width:250px'>";
+            var img9 = "<img src='actress/9.png'style='height:320px;width:250px'>";
+            var images = [img0,img1,img2,img3,img4,img5,img6,img7,img8,img9];
+            var ages = [39,35,33,30,27,24,24,29,28,33];
+            var stats = ["Unmarried","Unmarried","Married","Unmarried","Unmarried","Unmarried","Unmarried","Unmarried","Unmarried","Seperated"];
+
+            var ran = Math.random()*10;
+            var ran1 = Math.floor(ran);
+            function run(){
+                document.getElementById("img").innerHTML=images[ran1];
+                document.getElementById("nam").innerHTML="Name: "+names[ran1];
+                document.getElementById("age").innerHTML="Age: "+ages[ran1];
+                document.getElementById("status").innerHTML="Status: " +stats[ran1];
+            }
+        </script>
+    </head>
+    <body>
+        <table>
+            <tr>
+                <td><div id="img"></div></td>
+            </tr>
+            <tr>
+                <td id="nam"></td>
+            </tr>
+            <tr>
+                <td id="age"></td>
+            </tr>
+            <tr>
+                <td id="status"></td>
+            </tr>
+        </table>
+        <!--<div id="img" style="height: 320px; width:250px">
+            
+        </div>
+        <div id="nam">
+            
+        </div>
+        <div id="age">
+            
+        </div>
+        <div id="hs">
+            
+        </div>-->
+        <button onclick="run()">Click</button>
+    </body>
+</html>

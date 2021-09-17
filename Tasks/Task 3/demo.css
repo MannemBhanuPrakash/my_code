@@ -1,0 +1,218 @@
+*{
+	margin:0px;
+	padding:0px;
+    list-style-type:none;
+    box-sizing: border-box;
+    font-family: 'poppins',sans-serif;
+}
+
+
+
+h3{
+    text-align: initial;
+    font-size: medium;
+    font-weight: bolder;
+    padding-top: 50px;
+    padding-bottom: 15px;
+}
+
+table{
+    margin: 0;
+    padding: 0;
+    background: darkgrey;
+    border: solid 5px darkgray;
+    border-radius: 10px;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    border-radius: 10px;
+    background-image: url(background.jpg);
+    /*background: linear-gradient(to bottom left,rgb(252, 66, 20), white, rgb(31, 81, 247));*/  
+}
+.calculator{
+    position: relative;
+}
+.calculator .img{
+    grid-column: span 4;
+    border: none;
+    outline: none;
+}
+
+.display{
+    grid-column: span 4;
+    font-weight: bolder;
+    width: 252px;
+    height: 100px;
+    text-align: right;
+    border: 2px inset;
+    outline: none;
+    font-size: 22px;
+    border-radius: 10px;
+}
+.calculator input:active{
+    background-color: rgb(100, 0, 255);
+    color:black;
+}
+
+.clear{
+    display: grid;
+    width: 60px;
+    height: 60px;
+    place-items: center;
+    font-weight: bolder;
+    font-size: 22px;
+    border: outset 2px;
+    background-color:rgba(10, 197, 125, 0.815);
+    color:white;
+    border-radius: 10px;
+}
+
+.clear:hover{
+    background-color: rgb(52, 156, 253);
+    color: white;
+}
+
+.button{
+    display: grid;
+    width: 60px;
+    height: 60px;
+    place-items: center;
+    font-weight: bolder;
+    font-size: 22px;
+    border: outset 2px;
+    background-color:gray;
+    color:white;
+    border-radius: 10px;
+}
+
+.op{
+    border: outset 2px;
+    width: 60px;
+    height: 60px;
+    font-weight: bolder;
+    font-size: 22px;
+    color: white;
+    place-items: center;
+    display: grid;
+    background-color: rgb(88, 82, 82);
+    border-radius: 10px;
+}
+
+.op:hover{
+    background-color: rgb(52, 156, 253);
+    color: white;
+}
+
+.hide{
+    background-color: none;
+}
+
+.msg{
+    
+    border: outset 2px;
+    width: 60px;
+    height: 60px;
+    font-weight: bolder;
+    color: white;
+    place-items: center;
+    display: grid;
+    transition: 0.4s;
+    background-color:rgb(255, 81, 0);
+    border-radius: 10px;
+}
+
+.msg:hover{
+    background-color: rgb(147, 135, 252);
+    color: white;
+}
+
+.button:hover{
+    background-color: rgb(52, 156, 253);
+    color: white;
+}
+
+.xbut{
+    border: outset 2px;
+    height: 122px;
+    width: 60px;
+    font-weight: bolder;
+    font-size: 22px;
+    color: white;
+    place-items: center;
+    display: grid;
+    background-color:rgb(41, 39, 39);
+    border-radius: 10px;
+}
+
+.xbut:hover{
+    background-color: rgb(52, 156, 253);
+    color: white;
+}
+
+.ybut:hover{
+    background-color: rgb(52, 156, 253);
+    color: white;
+}
+
+
+.ybut{
+    border: outset 2px;
+    width: 124px;
+    height: 60px;
+    color: white;
+    place-items: center;
+    display: grid;
+    font-weight: bolder;
+    font-size: 22px;
+    background-color: gray;
+    border-radius: 10px;
+}
+
+.popup{
+    background-color:rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content{
+    height: 150px;
+    width: 300px;
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    position: relative;
+
+}
+
+.message{
+    grid-column: span 4;
+    width: 252px;
+    height: 100px;
+    text-align: center;
+    border: 2px inset;
+    font-style: italic;
+    outline: none;
+    border-radius: 2px;
+}
+td{
+    border-radius: 10px;
+}
+
+.close{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    height: 25px;
+    width: 25px;
+    cursor: pointer;
+    border-radius: 50%;
+}

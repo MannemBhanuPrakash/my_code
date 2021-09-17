@@ -1,0 +1,39 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>text check</title>
+    <link rel="icon" href="image.png" type="image/x-icon"/>
+    
+</head>
+<body style="text-align: center; padding-top: 100px;">
+    <h1>Text Validator with alert message </h1>
+    <input type="text" id="text1" placeholder="text1">
+    <input type="text" id="text2" placeholder="text2">
+    <button onclick="fn1()" id="btn1">check</button>
+   
+    
+    
+</body>
+<script>
+    function fn1()
+    {
+        var str1 = document.getElementById("text1").value;
+        var str2 = document.getElementById("text2").value;
+        if (str1 == "") {
+            alert("Please enter text in text1 box") ;   
+        }
+        else if(str2=="")
+        {
+            alert("Please enter text in text2 box") ;   
+        }else if(str1 == str2)
+        {
+            alert("text matched") ;    
+        }else{
+            alert("text doesnt matched");
+        }
+        
+    }
+</script>
+</html>

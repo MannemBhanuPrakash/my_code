@@ -1,0 +1,158 @@
+body{
+    margin: 0px;
+}
+header{
+    width: 100%;
+    height:100px;
+    background-color: rgb(121, 138, 74);
+}
+ul{
+    float: right;
+    margin-top: 10px;
+}
+li{
+    display: inline-block;
+    padding: 15px 30px;
+
+}
+a{
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+        
+}
+li a:hover{
+    color:#000000;
+    text-decoration: underline;
+}
+li a:active{
+    color: blue;
+}
+.ha1{
+    position: absolute;
+    padding: 1%;
+    float: left;
+    margin-left: 2%;
+    margin-top: 2px;
+    color: white;
+    font-size: 40px;
+}
+
+.head{
+    margin-top: 5px;
+    padding: 150px 150px;
+    text-align: center;
+    font-family:Serif;
+    font-size: 50px;
+    color: #ffffff;
+    background-image: url(https://media.istockphoto.com/photos/blue-abstract-background-or-texture-picture-id1138395421?k=6&m=1138395421&s=612x612&w=0&h=bJ1SRWujCgg3QWzkGPgaRiArNYohPl7-Wc4p_Fa_cyA=);
+    background-size: cover;
+   
+}
+.container_a{
+    margin-top: 0px;
+   
+    padding: 10px 20px;
+}
+.text_a{
+    padding-left:10% ;
+    margin:0px 30px 0px 600px;
+    }
+.image_a{
+    float: left;
+}
+.container_b{
+    background-color: rgb(255, 255, 255);
+    padding: 10px 20px;
+}
+.image_b{
+    width: 50%;
+    float: right;
+}
+.text_b{
+    padding: 2%;
+    margin:0px 500px 0px 0px;
+}
+.column {
+    float: left;
+    width: 33.33%;
+  }
+
+.footer_a{
+    float:left;
+    width: 33.33%;
+    background-color: rgb(121, 138, 74);
+}
+.contact{
+    width: 500px;    
+    background-color: rgb(121, 138, 74);
+    box-shadow: 0 0 30px 0 #000803;
+    top: 50%;
+    left: 50%;
+    transform: translate(100%,10%); 
+    
+}
+form{
+    margin-bottom: 50px;
+    margin-top: 10px;
+}
+.input{
+    width: 400px;
+    height: 40px;
+    padding: 0 10px;
+    margin-top: 20px;
+    border-radius: 12px;
+} 
+.social-menu ul {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(25%, 0%);
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+.social-menu ul li {
+    list-style: none;
+    margin: 0 4px;
+}
+.social-menu ul li .fa {
+    color: #000000;
+    font-size: 25px;
+    line-height: 50px;
+    transition: .1s;
+}
+.social-menu ul li .fa:hover {
+    color: #ffffff;
+}
+.social-menu ul li a {
+    position: relative;
+    display: block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgb(250, 250, 250);
+    text-align: center;
+    transition: 0.5s;
+    transform: translate(0,0px);
+    box-shadow: 0px 7px 5px rgba(0, 0, 0, 0.5);
+}
+.social-menu ul li a:hover {
+    transform: rotate(0deg) skew(0deg) translate(0, -10px);
+}
+.social-menu ul li:nth-child(1) a:hover {
+    background-color: #3b5999;
+}
+.social-menu ul li:nth-child(2) a:hover {
+    background-color: #55acee;
+}
+.social-menu ul li:nth-child(3) a:hover {
+    background-color: #e4405f;
+}
+.social-menu ul li:nth-child(4) a:hover {
+    background-color: #cd201f;
+}
+.social-menu ul li:nth-child(5) a:hover {
+    background-color: #0077B5;
+}

@@ -1,0 +1,65 @@
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="main.css">
+    <script src="card.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Game</title>
+</head>
+<body>
+
+    <aside>
+        <div class="scorecard" id="scorecard" style="visibility: hidden;">
+            <h2 id="score">Score</h2>
+            
+        </div>
+    </aside>
+
+    <button id="start" style="display: block;" onclick="start()">Start</button>
+    
+    <div class="card" id="card" role="button" style="display: none;" onclick="startgame()">
+        <section id="img">
+            
+        </section>
+        <table>
+            <tr>
+                <td>Name</td>
+                <td>:</td>
+                <td id="name"></td>
+            </tr>
+            <tr>
+                <td>Matches Played</td>
+                <td>:</td>
+                <td id="mp"></td>
+            </tr>
+            <tr>
+                <td>High Score</td>
+                <td>:</td>
+                <td id="hs"></td>
+            </tr>
+            <tr>
+                <td>Runs Scored</td>
+                <td>:</td>
+                <td id="rs"></td>
+            </tr>
+            <tr>
+                <td>No. of Wickets</td>
+                <td>:</td>
+                <td id="wickets"></td>
+            </tr>
+            <tr>
+                <td>Catches</td>
+                <td>:</td>
+                <td id="catches"></td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="button" id="button" style="display: none;">
+        <button id="win" onclick="points(this.id)">Win</button>
+        
+        <button id="lose" onclick="points(this.id)">Lose</button>
+    </div>
+
+</body>
+</html>

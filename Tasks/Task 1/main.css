@@ -1,0 +1,62 @@
+*{
+	margin:0px;
+	padding:0px;
+    list-style-type:none;
+    background-color: powderblue;
+}
+
+.title{
+    text-align: center;
+    font-weight: bold;
+}
+h2{
+    margin-top: 50px;
+}
+h3{
+    font-weight: normal;
+}
+header,article,section,footer,aside{
+	display:block;
+}
+/* centering website */
+.container{
+	width:1200px;
+    margin:0px auto;
+}
+
+.clear{
+	clear:both;
+}
+
+/* float aside and main section */
+.left{
+    float:left;
+    height: 300px;
+	width:300px;
+    text-align: center;
+}
+.middle{
+    float:left;
+    padding:0px 0px;
+    height: 250px;
+    width:500px;
+    text-align: center;
+}
+
+.right{
+    float:left;
+    height: 300px;
+    padding: 50px 50px;
+    width:300px;
+    text-align: center;
+}
+#social{
+    padding-top: 50px;
+}
+
+
+/* make footer clear */
+.footer{
+	clear:both;
+	text-align:center;
+}

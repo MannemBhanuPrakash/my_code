@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Catch Me If You Can</title>
+        <meta charset="utf-18">
+        <link rel="stylesheet" href="main.css">
+        <script>
+            var jer = "<img src='jerry.png' style='height:120px;width:120px'>";
+            
+            function showJerry(clicked_id){
+                var ran = Math.floor(Math.random() * (9 - 1 + 1) ) + 1;
+                document.getElementById(ran).innerHTML=jer;   
+                if (clicked_id == ran){
+                    document.getElementById("result").innerHTML="You Won";
+                    //return showJerry(clicked_id);
+                    /**/
+                }else{
+                    if (clicked_id=true){
+                        setTimeout(function(){
+                            window.location.reload(1);
+                        },1000);
+                }
+            }
+        }
+        </script>
+    </head>
+    <body>
+        <h1>Catch the Mouse</h1>
+        <form class="grid">
+            <h2 class="heading"></h2>
+            <button type = "button" id="1" onclick="showJerry(this.id)"></button>
+            <button type = "button" id="2" onclick="showJerry(this.id)"></button>
+            <button type = "button" id="3" onclick="showJerry(this.id)"></button>
+            <button type = "button" id="4" onclick="showJerry(this.id)"></button>
+            <button type = "button" id="5" onclick="showJerry(this.id)"></button>
+            <button type = "button" id="6" onclick="showJerry(this.id)"></button>
+            <button type = "button" id="7" onclick="showJerry(this.id)"></button>
+            <button type = "button" id="8" onclick="showJerry(this.id)"></button>
+            <button type = "button" id="9" onclick="showJerry(this.id)"></button>
+        </form>
+        <h1 id="result"></h1>
+        
+    </body>
+</html>

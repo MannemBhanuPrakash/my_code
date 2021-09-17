@@ -1,0 +1,150 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        var questions = ["1. How many days do we have in a week?","2. How many days are there in a year?",
+                        "3. How many colors are there in a rainbow?","4. Which animal is known as the ‘Ship of the Desert?’",
+                        "5. How many letters are there in the English alphabet?","6. How many consonants are there in the English alphabet?",
+                        "7. How many sides are there in a triangle?","8. In which direction does the sun rise?",
+                        "9. What do you call a type of shape that has five sides?","10. Which month of the year has the least number of days?"];
+        var answers = ["7","365","7","Camel","26","21","Three","East","Pentagon","Febraury"];
+        var option1 = ["10","365","5","Elephant","25","22","Three","West","Triangle","April"];
+        var option2 = ["1 ","360","6","Camel","24","20","Four","East","Pentagon","March"];
+        var option3 = ["7 ","345","7","Girraffe","27","21","Five","South","Square","June"];
+        var option4 = ["12","355","3","Kangaroo","26","19","Two","North","Hexagon","Febraury"];
+        var result = 0;
+        var score;
+        var count=0;
+        var nextcount;
+        function quiz(){
+            setTimeout(timer,10000);
+            document.getElementById("startdiv").style.visibility="hidden";
+            document.getElementById("start").style.visibility="hidden";
+            //document.getElementById("prev").style.visibility="visible";
+            document.getElementById("next").style.visibility="visible";
+            //document.getElementById("submit").style.visibility="visible";
+            //document.getElementById("ans").style.visibility="visible";
+
+
+            document.getElementById("quest").innerHTML=questions[count];
+            document.getElementById("label1").innerHTML="<input type='radio' id='option1' name= 'option' value="+option1[count]+">"+option1[count];
+            document.getElementById("label2").innerHTML="<input type='radio' id='option2' name= 'option' value="+option2[count]+">"+option2[count];
+            document.getElementById("label3").innerHTML="<input type='radio' id='option3' name= 'option' value="+option3[count]+">"+option3[count];       
+            document.getElementById("label4").innerHTML="<input type='radio' id='option4' name= 'option' value="+option4[count]+">"+option4[count];
+            
+            if(count==9){
+                document.getElementById("submit").style.visibility="visible";
+                document.getElementById("next").style.visibility="hidden";
+                
+            }
+            
+        }
+
+        function timer(){
+            document.getElementById("greet").innerHTML = "Your Time is Up!!";
+            document.getElementById("quest").style.visibility="hidden";
+            document.getElementById("label1").style.visibility="hidden";
+            document.getElementById("label2").style.visibility="hidden";
+            document.getElementById("label3").style.visibility="hidden";
+            document.getElementById("label4").style.visibility="hidden";
+            document.getElementById("next").style.visibility="hidden";
+            document.getElementById("submit").style.visibility="hidden";
+            document.getElementById("result").innerHTML="Your Score = "+score;
+        }
+
+        function submit(){
+            document.getElementById("quest").style.visibility="hidden";
+            document.getElementById("label1").style.visibility="hidden";
+            document.getElementById("label2").style.visibility="hidden";
+            document.getElementById("label3").style.visibility="hidden";
+            document.getElementById("label4").style.visibility="hidden";            
+            var select = document.getElementsByName("option");
+            for(j = 0, len=select.length; j < len; j++)
+            { 
+                if(select[j].checked){
+                    if((select[j].value)==answers[count]){
+                        result+=1;
+                        score=result;
+                        console.log(select[j].value);
+                        console.log(answers[count]);
+                        console.log(score);
+                    }
+                }
+            }
+            document.getElementById("greet").innerHTML="Congratulations, You have completed the Quiz!!"
+            document.getElementById("result").innerHTML="Your Score = "+score;
+            document.getElementById("submit").style.visibility="hidden";
+        }
+
+        function next(){
+            var select = document.getElementsByName("option");
+            for(j = 0, len=select.length; j < len; j++)
+            { 
+                if(select[j].checked){
+                    if((select[j].value)==answers[count]){
+                        result+=1;
+                        score=result;
+                        console.log(select[j].value);
+                        console.log(answers[count]);
+                        console.log(score);
+                    }
+                }
+            }
+            count+=1;
+            nextcount=count;
+            console.log(count);
+            quiz();
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <section>
+            <h2 id="quest"></h2>
+
+            <br>
+
+            <label for="option" id="label1">
+
+            </label>
+
+            <label for="option" id="label2">
+
+            </label>
+
+            <label for="option" id="label3">
+
+            </label>
+
+            <label for="option" id="label4">
+
+            </label>
+
+            <br>
+            <div id="timer" style="visibility: hidden;">Time left <span id="time">05:00</span></div>
+            <h2 id="greet"></h2>
+
+            <br>
+
+            <h2 id="result"></h2>
+
+            <br><br>
+            
+            <button type="submit" id="submit" onclick="submit()" style="visibility: hidden;">submit</button>
+                
+            <br><br>
+            
+            <button id="next" style="visibility: hidden;" onclick="next()">next</button>
+        </section>
+        <br><br>
+    </div>
+    <div id="startdiv" style="visibility: visible;">
+        <section>
+            <button id="start" onclick="quiz()" style="visibility: visible;">Start Quiz</button>
+        </section>
+    </div>
+</body>
+</html>
